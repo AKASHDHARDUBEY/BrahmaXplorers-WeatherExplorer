@@ -74,7 +74,7 @@ git clone <repository-url>
 cd BrahmaXplorers-WeatherExplorer
 ```
 
-### 2. Backend Setup
+### 2. Backend Setup (API)
 
 ```bash
 cd server
@@ -82,18 +82,27 @@ cd server
 # Install dependencies
 npm install
 
-# Setup environment variables
-cp .env.example .env
-# Edit .env with your database credentials
+# Create .env with your values (example)
+# DATABASE_URL="mysql://root:password@localhost:3306/weatherapp"
+# PORT=3002
+
+# Generate Prisma client
+npx prisma generate
 
 # Initialize database
 npx prisma migrate dev --name init
 
 # Start the server
-npm start
+node server.js
 ```
 
-The backend will run on `http://localhost:5000`
+Backend runs on `http://localhost:3002`
+
+Optional: DB viewer
+```bash
+cd server
+npx prisma studio
+```
 
 ### 3. Frontend Setup
 
@@ -104,10 +113,10 @@ cd client
 npm install
 
 # Start the development server
-npm start
+PORT=3001 npm start
 ```
 
-The frontend will run on `http://localhost:3000`
+Frontend runs on `http://localhost:3001`
 
 ## 🔧 Configuration
 
