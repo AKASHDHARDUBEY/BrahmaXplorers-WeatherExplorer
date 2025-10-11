@@ -234,7 +234,7 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
 ## 👥 Team
 
 **BrahmaXplorers** - Building innovative solutions with modern technology
-
+......................................
 ## 🙏 Acknowledgments
 
 - NASA for providing open Earth data APIs
